@@ -1,6 +1,8 @@
-#bsaraiva - Biblioteca com funções uteis desenvolvidas ao longo das aulas
+#bsaraiva - Library with some cool functions I've mande during classes
 
 import numpy as np
+import time
+import os
 
 def prime_finder(num): #Verify is the number given is a prime number
   if num > 1:
@@ -38,11 +40,12 @@ def is_pangram(s): #Verify if the string is a pangram
         return True
 
 def loading_bar():
-	n = 0
-    	while n <= 20: #creates a loading bar
-          print("_"*22)
-          print("|"+'▇'*n+' '*(20-n)+'|')
-          print("‾"*22)
-          time.sleep(2)
-          n += 1
-          clear_output()
+    n = 0
+    while n <= 20: #creates a loading bar
+        print("_"*22)
+        print("|"+'▇'*n+' '*(20-n)+'|')
+        print("‾"*22)
+        time.sleep(2)
+        n += 1
+        os.system('clear')
+
